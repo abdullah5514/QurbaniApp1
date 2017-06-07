@@ -13,7 +13,7 @@ class V1::PostsController < ApplicationController
 
   def createpost
   	#debugger
-  	@user = User.find(params[:user_id])
+  	@user = User.find(params[:user_id].to_i)
   	@post = @user.posts.build(permit_post)
   	if @post.save
   		render json: "1"
