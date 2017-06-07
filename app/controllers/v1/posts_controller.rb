@@ -14,7 +14,7 @@ class V1::PostsController < ApplicationController
   def createpost
   	#debugger
   	@user = User.find(params[:user_id].to_i)
-  	@post = @user.posts.build(permit_post)
+  	@post = @user.posts.build(:imagekey => params[:imagekey] , description: params[:description] , :user_id => params[:user_id].to_i)
   	if @post.save
   		render json: "1"
   	else
