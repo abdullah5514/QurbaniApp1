@@ -1,6 +1,6 @@
 class V1::PostsController < ApplicationController
   def index
-  	@posts = Post.all
+  	@posts = Post.all.order("created_at DESC")
     if @posts.present?
   	 render json: @posts
     else
@@ -33,7 +33,7 @@ class V1::PostsController < ApplicationController
   end
 
   def getspecificanimal
-    @posts = Post.where(:category => params[:category])
+    @posts = Post.where(:category => params[:category]).order("created_at DESC")
     if @posts.present?
       render json: @posts
     else
