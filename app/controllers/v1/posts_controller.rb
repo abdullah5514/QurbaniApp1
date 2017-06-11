@@ -34,7 +34,7 @@ class V1::PostsController < ApplicationController
 
   def getspecificanimal
     @posts = Post.where(:category => params[:category])
-    if @posts.pressent?
+    if @posts.present?
       render json: @posts
     else
       render json: "-1"
