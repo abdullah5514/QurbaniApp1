@@ -3,9 +3,11 @@
 one:
   imagekey: MyString
   description: MyString
+  category: MyString
   user_id: 1
 
 two:
   imagekey: MyString
   description: MyString
+  category: MyString
   user_id: 1
