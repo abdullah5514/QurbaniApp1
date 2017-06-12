@@ -2,10 +2,10 @@
 
 one:
   commentbody: MyString
-  post_id: 1
-  user_id: 1
+  post: one
+  user: one
 
 two:
   commentbody: MyString
-  post_id: 1
-  user_id: 1
+  post: two
+  user: two

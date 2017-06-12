@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  
+
   namespace :v1 do
     resources :users do
       collection do
@@ -24,6 +26,7 @@ Rails.application.routes.draw do
     resources :comments do
       collection do
         post 'createcomment'
+        post 'getcommentsofpost'
       end
     end
   end  
