@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   
 
+  
+
   namespace :v1 do
     resources :users do
       collection do
@@ -27,6 +29,16 @@ Rails.application.routes.draw do
       collection do
         post 'createcomment'
         post 'getcommentsofpost'
+      end
+    end
+  end  
+
+  namespace :v1 do
+    resources :likes do
+      collection do
+        post 'createlike'
+        post 'getlikescountofpost'
+        post 'getlikesofpost'
       end
     end
   end  
