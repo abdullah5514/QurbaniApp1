@@ -39,6 +39,8 @@ Rails.application.routes.draw do
         post 'createlike'
         post 'getlikescountofpost'
         post 'getlikesofpost'
+        post 'deletelike'
+        post 'getuserlikes'
       end
     end
   end  

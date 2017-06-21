@@ -32,4 +32,18 @@ class V1::LikesController < ApplicationController
   		render json: "-1"
   	end
   end
+
+  def deletelike
+  	@like = Like.where(:user_id => params[:user_id] , :post_id => params[:post_id]).destroy_all
+  	render json: "1"
+  end
+
+  def getuserlikes
+  	@likes = Like.where(:user_id => params[:user_id])
+  	if @likes.present?
+  		render json: @likes
+  	else
+  		render json: "-1"
+  	end
+  end
 end
